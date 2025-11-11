@@ -1,12 +1,11 @@
-let RunSentimentAnalysis = ()=>{
-    textToAnalyze = document.getElementById("textToAnalyze").value;
-
-    let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("system_response").innerHTML = xhttp.responseText;
-        }
-    };
-    xhttp.open("GET", "sentimentAnalyzer?textToAnalyze"+"="+textToAnalyze, true);
-    xhttp.send();
+let RunSentimentAnalysis = async () => {
+    const textToAnalyze = document.getElementById("textToAnalyze").value;
+    
+    try {
+        const response = await fetch(`sentimentAnalyzer?textToAnalyze=${textToAnalyze}`);
+        const result = await response.text();
+        document.getElementById("system_response").innerHTML = result;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
