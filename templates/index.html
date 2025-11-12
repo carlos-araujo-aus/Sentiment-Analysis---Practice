@@ -1,32 +1,89 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="./static/mywebscript.js"></script>
-    <style>
-        .center-heading {
-            text-align: center;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis - Watson NLP</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    <div class="card">
-        <div class="card-body">
-            <h1 class="center-heading">NLP - Sentiment Analysis using BERT</h1> 
-            <div style="padding: 25px 25px 25px 25px;">
-            <h2 class="mb-3">
-                <label class="form-label">Please enter the text to be analyzed</label>
-                <input type="textarea" class="form-control" id="textToAnalyze">
-            </h2>
-
-            <div style="padding: 25px 25px 25px 25px;">
-                <button onclick="RunSentimentAnalysis()" class="btn btn-secondary">Run Sentiment Analysis</button>
+    <div class="container-custom">
+        <div class="main-card">
+            <!-- Header -->
+            <div class="card-header-custom">
+                <h1><i class="fas fa-brain"></i> Sentiment Analysis</h1>
+                <p>Powered by Watson NLP & BERT Model</p>
             </div>
-            <div style="padding: 25px 25px 25px 25px;"></div>
-            <h2 class="mb-3">
-                <label class="form-label">Result of Sentiment Analysis</label>
-            </h2>
 
-            <div id="system_response" style="padding: 25px 25px 25px 25px;"></div>
+            <!-- Body -->
+            <div class="card-body-custom">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label class="input-label">
+                        <i class="fas fa-pen-fancy"></i>
+                        Enter your text to analyze
+                    </label>
+                    <textarea 
+                        class="form-control form-control-custom" 
+                        id="textToAnalyze" 
+                        placeholder="Type or paste your text here... (e.g., 'I love working with Python!')"
+                        rows="5"
+                    ></textarea>
+                </div>
+
+                <!-- Analyze Button -->
+                <button onclick="RunSentimentAnalysis()" class="btn btn-analyze">
+                    <i class="fas fa-chart-line"></i>
+                    Analyze Sentiment
+                </button>
+
+                <!-- Loading Spinner -->
+                <div class="loading-spinner" id="loadingSpinner">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <p class="mt-2">Analyzing your text...</p>
+                </div>
+
+                <!-- Result Section -->
+                <div class="result-section">
+                    <label class="result-label">
+                        <i class="fas fa-lightbulb"></i>
+                        Analysis Result
+                    </label>
+                    <div id="system_response">
+                        <span class="placeholder-text">
+                            <i class="fas fa-info-circle"></i>
+                            Your sentiment analysis result will appear here
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer-info">
+                <i class="fas fa-code"></i>
+                Built with Flask & Watson NLP
+            </div>
         </div>
     </div>
+
+    <!-- JavaScript -->
+    <script src="./static/mywebscript.js"></script>
+    
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>
