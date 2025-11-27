@@ -26,11 +26,12 @@ def sent_analyzer():
     if label is None:
         return "Invalid input! Try again.", 500
 
-    # Extract sentiment type (remove 'SENT_' prefix)
-    sentiment_type = label.split('_')[1].lower()
-
     # Return formatted response
-    return f"The given text has been identified as {sentiment_type} with a score of {score}."
+    return (
+        f"The given text has been identified as " 
+        f"<strong style='color: red;'>{label}</strong> with a score of "
+        f"<strong style='color: red;'>{score}</strong> aout of 100."
+    )
 
 @app.route("/")
 def render_index_page():
