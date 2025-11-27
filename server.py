@@ -6,13 +6,13 @@ from flask import Flask, render_template, request
 
 from SentimentAnalysis import sentiment_analyzer
 
-app = Flask(__name__)
+app = Flask(__name__)  # ← ESTO ES IMPORTANTE
 
 @app.route("/sentimentAnalyzer")
 def sent_analyzer():
     """Analyze sentiment of provided text."""
     text_to_analyze = request.args.get('textToAnalyze', '')
-
+    
     # Validate input
     if not text_to_analyze or not text_to_analyze.strip():
         return "Invalid input! Try again.", 400

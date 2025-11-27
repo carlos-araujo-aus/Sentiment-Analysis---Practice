@@ -1,0 +1,267 @@
+# ============================================
+# ARCHIVOS SENSIBLES Y CREDENCIALES
+# ============================================
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+*.env
+
+# Credenciales y claves API
+secrets.json
+credentials.json
+api_keys.txt
+config/secrets.py
+
+# Certificados y claves
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+
+# ============================================
+# ENTORNOS VIRTUALES DE PYTHON
+# ============================================
+
+# Virtualenv
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.venv-1/
+.Python
+
+# Pipenv
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# ============================================
+# ARCHIVOS DE PYTHON
+# ============================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# ============================================
+# FLASK ESPECÍFICO
+# ============================================
+
+# Flask instance folder
+instance/
+
+# Flask cache
+flask_session/
+
+# Logs de Flask
+*.log
+logs/
+*.logs
+
+# Uploads de usuarios
+uploads/
+media/
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# ============================================
+# IDEs Y EDITORES
+# ============================================
+
+# Visual Studio Code
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Spyder
+.spyderproject
+.spyproject
+
+# ============================================
+# SISTEMA OPERATIVO
+# ============================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================
+# BACKUPS Y TEMPORALES
+# ============================================
+
+# Backups
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
+*.temp
+
+# Archivos temporales
+tmp/
+temp/
+*.cache
+
+# ============================================
+# DOCUMENTACIÓN Y NOTAS PERSONALES
+# ============================================
+
+# Notas personales
+TODO.md
+NOTES.md
+notes/
+drafts/
+
+# Documentación generada
+docs/_build/
+site/
+
+# ============================================
+# NODE.JS (si usas npm para frontend)
+# ============================================
+
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================
+# DATOS Y BASES DE DATOS
+# ============================================
+
+# Datos sensibles
+data/
+datasets/
+*.csv
+*.xlsx
+*.json (excepto package.json)
+
+# Bases de datos
+*.sql
+*.dump
+
+# ============================================
+# CONFIGURACIÓN LOCAL
+# ============================================
+
+# Configuración local específica
+config.local.py
+settings.local.py
+local_settings.py
+
+# ============================================
+# OTROS
+# ============================================
+
+# Archivos comprimidos
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Archivos de sistema
+.DS_Store
+*.swp
